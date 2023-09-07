@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-def add(a, b):
-    return (a + b)
-
-
 a = 1
 b = 2
-print("{} + {} = {}".format(a, b, add(a, b)))
+import add_0
+
+result = add_0.add(a, b)
+
+print("{:d} + {:d} = {:d}".format(a, b, result))
+

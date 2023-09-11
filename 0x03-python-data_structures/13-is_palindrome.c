@@ -10,10 +10,6 @@
 
 int is_palindrome(listint_t **head)
 {
-if (*head == NULL)
-{
-return (1);
-}
 size_t length = 0;
 int i = 0;
 size_t j;

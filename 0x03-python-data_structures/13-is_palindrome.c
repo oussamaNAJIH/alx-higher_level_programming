@@ -2,7 +2,6 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * is_palindrome - checks if a linked list is a palindrome
  * @head: pointer to the head of the list

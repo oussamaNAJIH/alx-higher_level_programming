@@ -19,6 +19,10 @@ int i = 0;
 size_t j;
 listint_t *current = *head;
 int *list;
+if (*head == NULL)
+{
+return (1);
+}
 while (current != NULL)
 {
 length++;

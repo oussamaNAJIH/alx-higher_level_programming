@@ -5,6 +5,6 @@ def safe_print_integer(value):
         print(formatted_value)
     except ValueError:
         return False
-    except:
+    except Exception:
         return False
     return True

@@ -26,8 +26,11 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-        if not isinstance(position, tuple) or any(v < 0 for v in position):
+        if not isinstance(position, tuple) or \
+                len(position) != 2 or \
+                any(not isinstance(v, int) or v < 0 for v in position):
             raise TypeError("position must be a tuple of 2 positive integers")
+
         self.__position = position
 
     @property
@@ -52,7 +55,9 @@ class Square:
     @position.setter
     def position(self, value):
         """setter for position attribute"""
-        if not isinstance(value, tuple) or any(v < 0 for v in value):
+        if not isinstance(value, tuple) or \
+                len(value) != 2 or \
+                any(not isinstance(v, int) or v < 0 for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 

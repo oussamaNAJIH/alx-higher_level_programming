@@ -1,0 +1,40 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+# Import module:
+>>> add = __import__('0-add_integer').add_integer
+
+# Test basic:
+    >>> add(1, 2)
+    3
+
+    >>> add(2)
+    100
+    
+    >>> add(100.3, -2)
+    98
+
+# Test second arg invalid
+    >>> add(4, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+# Test first arg invalid
+    >>> add(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+# Test with float inputs:
+    >>> add(-1.5, -2.5)
+    -3
+
+# Test with large integers:
+    >>> add(999999999, 1)
+    1000000000
+
+    >>> add(-999999999, -1)
+    -1000000000

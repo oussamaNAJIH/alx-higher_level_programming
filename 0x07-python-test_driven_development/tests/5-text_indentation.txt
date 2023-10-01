@@ -20,3 +20,25 @@ Test string whith ., ? and ::
     Bill.
     <BLANKLINE>
     Just say it
+
+Test empty string:
+    >>> indent("")
+
+Test new line:
+    >>> indent("\n")
+    <BLANKLINE>
+
+Test delimiters:
+    >>> indent(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test other format:
+    >>> indent(98)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string

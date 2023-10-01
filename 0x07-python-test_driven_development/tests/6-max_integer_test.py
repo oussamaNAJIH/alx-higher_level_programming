@@ -30,5 +30,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_large_negative_list(self):
         self.assertEqual(max_integer(list(range(-10000, 0))), -1)
 
+
 if __name__ == '__main__':
     unittest.main()

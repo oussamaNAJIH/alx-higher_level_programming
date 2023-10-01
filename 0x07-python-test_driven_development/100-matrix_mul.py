@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module for multiplying two Matrix"""
 
+
 def matrix_mul(m_a, m_b):
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
@@ -23,9 +24,9 @@ def matrix_mul(m_a, m_b):
             if not isinstance(elem, (int, float)):
                 raise TypeError("m_b should contain only integers or floats")
     if any(len(row) != len(m_a[0]) for row in m_a):
-        raise ValueError("each row of m_a must be of the same size")
+        raise TypeError("each row of m_a must be of the same size")
     if any(len(row) != len(m_b[0]) for row in m_b):
-        raise ValueError("each row of m_b must be of the same size")
+        raise TypeError("each row of m_b must be of the same size")
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     result = [[0 for _ in range(len(m_b[0]))] for _ in range(len(m_a))]

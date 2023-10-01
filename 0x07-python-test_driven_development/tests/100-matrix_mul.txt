@@ -1,0 +1,78 @@
+The ``100-matrix_mul`` module
+============================
+
+Using ``matrix_mul``
+---------------------
+
+Import module:
+    >>> mul = __import__('100-matrix_mul').matrix_mul
+
+Test possible maultiplication of two matrices:
+    >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+Test first arg not list:
+    >>> mul("hello", [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Test second arg not list:
+    >>> mul([[1, 2], [3, 4]], "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+Test first arg not list of lists:
+    >>> mul([3, 4], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list of lists
+
+Test second arg not list of lists:
+    >>> mul([[1, 2], [3, 4]], [1, 5])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list of lists
+
+Test second arg is empty:
+    >>> mul([[1, 2], [3, 4]], [])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Test first arg is empty:
+    >>> mul([], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Test invalid type of first arg:
+    >>> mul([[1, "hello"], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+
+Test invalid type of second arg:
+    >>> mul([[1, 4], [3, 4]], [[1, "hello"], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+
+Test invalid size of first arg:
+    >>> mul([[1, 3, 6], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size
+
+Test invalid size of second arg:
+    >>> mul([[1, 4], [3, 4]], [[1, 4, 8], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must be of the same size
+
+Test impossible maultiplication:
+    >>> mul([[1, 4], [3, 4]], [[4, 8], [3, 4], [5, 9]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied

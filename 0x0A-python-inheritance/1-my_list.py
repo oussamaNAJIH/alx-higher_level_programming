@@ -14,4 +14,3 @@ class MyList(list):
         """
         self.sort()
         print(self)
-

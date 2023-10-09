@@ -1,0 +1,14 @@
+The ''1-my_list'' module
+==========================
+
+Using ''print_sorted''
+--------------------------
+
+Import module:
+    >>> print_list = __import__('1-my_list.py').print_sorted
+
+Test basic:
+    >>> 
+
+Test ..;
+    >>> 

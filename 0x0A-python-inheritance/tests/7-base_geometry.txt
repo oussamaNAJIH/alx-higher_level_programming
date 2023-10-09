@@ -24,11 +24,11 @@ Test integer_validator invalid value type:
     >>> g3.integer_validator("hello", "there")
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: hello must be an integer
 
 Test integer_validator invalid valu:
     >>> g3 = BaseGeometry()
     >>> g3.integer_validator("hello", -4)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: hello must be greater than 0

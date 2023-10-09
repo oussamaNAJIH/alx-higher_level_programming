@@ -17,6 +17,10 @@ Test object type:
     >>> print(isinstance(my_list1, list))
     True
 
+print_sorted method is an instance method:
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
+
 Test List of integers:
     >>> my_list1 = MyList()
     >>> my_list1.append(1)

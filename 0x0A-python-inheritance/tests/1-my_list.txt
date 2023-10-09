@@ -18,7 +18,7 @@ print_sorted method is an instance method:
     <class 'function'>
 
 print_sorted method called via class with no args:
-    >>> ml.__class__.print_sorted()
+    >>> my_list1.__class__.print_sorted()
     Traceback (most recent call last):
     TypeError: print_sorted() missing 1 required positional argument: 'self'
 

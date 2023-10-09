@@ -95,3 +95,15 @@ Test integer_validator invalid valid arguments:
 Test integer_validator invalid valid arguments:
     >>> g3 = BaseGeometry()
     >>> g3.integer_validator(None, 20)
+
+Test integer_validator method arg with 0 args:
+    >>> g3 = BaseGeometry()
+    >>> g3.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    
+Test integer_validator method arg with 3 args:
+    >>> g3 = BaseGeometry()
+    >>> g3.integer_validator(1, 1, 1)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given

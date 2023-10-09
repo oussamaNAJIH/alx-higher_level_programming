@@ -27,3 +27,17 @@ Test List of integers:
     >>> my_list1.print_sorted()
     [1, 2, 3, 4, 5]
 
+Test empty list:
+    >>> my_list1 = MyList()
+    >>> my_list1.print_sorted()
+    []
+
+Test a list with duplicate values
+    >>> my_list3 = MyList([3, 3, 2, 1, 1, 2])
+    >>> my_list3.print_sorted()
+    [1, 1, 2, 2, 3, 3]
+
+Test a list with negatif values : 
+    >>> my_list3 = MyList([3, -8, 2, 1, -9, -4])
+    >>> my_list3.print_sorted()
+    [-9, -8, -4, 1, 2, 3]

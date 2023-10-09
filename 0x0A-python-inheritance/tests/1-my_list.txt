@@ -56,3 +56,7 @@ Test diffeent methods :
     >>> my_list1.print_sorted()
     [1, 2, 4]
 
+Test List already ordered: 
+    >>> my_list3 = MyList([1, 1, 2, 2, 3, 3])
+    >>> my_list3.print_sorted()
+    [1, 1, 2, 2, 3, 3]

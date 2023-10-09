@@ -41,3 +41,18 @@ Test a list with negatif values :
     >>> my_list3 = MyList([3, -8, 2, 1, -9, -4])
     >>> my_list3.print_sorted()
     [-9, -8, -4, 1, 2, 3]
+
+Test diffeent methods : 
+    >>> my_list1 = MyList()
+    >>> my_list1.append(1)
+    >>> my_list1.append(4)
+    >>> my_list1.append(2)
+    >>> my_list1.append(3)
+    >>> my_list1.append(5)
+    >>> my_list1.pop()
+    5
+    >>> my_list1.pop()
+    3
+    >>> my_list1.print_sorted()
+    [1, 2, 4]
+

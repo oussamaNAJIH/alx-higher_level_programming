@@ -14,6 +14,11 @@ Test object type:
 
 Test object type:
     >>> my_list1 = MyList()
+    >>> isinstance(my_list1, list)
+    True
+
+Test object type:
+    >>> my_list1 = MyList()
     >>> print(isinstance(my_list1, list))
     True
 

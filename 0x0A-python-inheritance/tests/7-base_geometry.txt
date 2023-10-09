@@ -7,28 +7,23 @@ Using ''area and integer_validator''
 Import class:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Test Type:
-    >>> g1 = BaseGeometry()
-    >>> print(type(g1))
-    <class '7-base_geometry.BaseGeometry'>
-
-Test area methode:
-    >>> g2 = BaseGeometry()
-    >>> g2.area()
-    Traceback (most recent call last):
-    ...
-    Exception: area() is not implemented
-
 Test integer_validator invalid value type:
     >>> g3 = BaseGeometry()
-    >>> g3.integer_validator("hello", "there")
+    >>> g3.integer_validator("age", "there")
     Traceback (most recent call last):
     ...
-    TypeError: hello must be an integer
+    TypeError: age must be an integer
 
 Test integer_validator invalid valu:
     >>> g3 = BaseGeometry()
-    >>> g3.integer_validator("hello", -4)
+    >>> g3.integer_validator("age", -4)
     Traceback (most recent call last):
     ...
-    ValueError: hello must be greater than 0
+    ValueError: age must be greater than 0
+
+Test area methode:
+    >>> g3 = BaseGeometry()
+    >>> g3.area
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented

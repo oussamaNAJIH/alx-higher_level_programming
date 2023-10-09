@@ -77,3 +77,7 @@ Test integer_validator invalid valid arguments:
 Test integer_validator invalid valid arguments:
     >>> g3 = BaseGeometry()
     >>> g3.integer_validator("", 20)
+
+Test integer_validator invalid valid arguments:
+    >>> g3 = BaseGeometry()
+    >>> g3.integer_validator(None, 20)

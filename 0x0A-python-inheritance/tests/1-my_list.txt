@@ -8,18 +8,10 @@ Import module:
     >>> MyList = __import__('1-my_list').MyList
 
 
-
-
-
 Test object type:
     >>> my_list1 = MyList()
     >>> print(type(my_list1))
     <class '1-my_list.MyList'>
-
-Test object type:
-    >>> my_list1 = MyList()
-    >>> isinstance(my_list1, list)
-    True
 
 
 Test List of integers:

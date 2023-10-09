@@ -12,8 +12,7 @@ class MyList(list):
         """
         Public instance method that prints the list, but sorted
         """
-        self.sort()
-        print(self)
+        print(sorted(self))
 
 
 if __name__ == "__main__":

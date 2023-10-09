@@ -26,6 +26,8 @@ Test a list with negatif values :
     >>> my_list1 = MyList([3, -8, 2, 1, -9, -4])
     >>> my_list1.print_sorted()
     [-9, -8, -4, 1, 2, 3]
+    >>> my_list1
+    [3, -8, 2, 1, -9, -4]
 
 Test List already ordered: 
     >>> my_list1 = MyList([1, 1, 2, 2, 3, 3])

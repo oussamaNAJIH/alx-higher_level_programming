@@ -12,8 +12,6 @@ Test empty list:
     >>> my_list1.print_sorted()
     []
 
-
-
 Test List of integers:
     >>> my_list1 = MyList()
     >>> my_list1.append(1)
@@ -24,12 +22,10 @@ Test List of integers:
     >>> my_list1.print_sorted()
     [1, 2, 3, 4, 5]
 
-
 Test basic 2:
     >>> my_list3 = MyList([7, 5, 0])
     >>> my_list3.print_sorted()
     [0, 5, 7]
-
 
 Test a list with duplicate values
     >>> my_list3 = MyList([3, 3, 2, 1, 1, 2])
@@ -40,7 +36,6 @@ Test a list with negatif values :
     >>> my_list3 = MyList([3, -8, 2, 1, -9, -4])
     >>> my_list3.print_sorted()
     [-9, -8, -4, 1, 2, 3]
-
 
 Test List already ordered: 
     >>> my_list3 = MyList([1, 1, 2, 2, 3, 3])

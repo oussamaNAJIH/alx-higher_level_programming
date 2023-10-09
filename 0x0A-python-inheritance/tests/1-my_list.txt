@@ -11,3 +11,8 @@ Test object type:
     >>> my_list1 = MyList()
     >>> print(type(my_list1))
     <class '1-my_list.MyList'>
+
+Test object type:
+    >>> my_list1 = MyList()
+    >>> print(isinstance(my_list1, list))
+    True

@@ -5,10 +5,9 @@ Using ''print_sorted''
 --------------------------
 
 Import module:
-    >>> print_list = __import__('1-my_list.py').print_sorted
+    >>> MyList = __import__('1-my_list').MyList
 
-Test basic:
-    >>> 
-
-Test ..;
-    >>> 
+Test object type:
+    >>> my_list1 = MyList()
+    >>> print(type(my_list1))
+    <class '1-my_list.MyList'>

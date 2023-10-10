@@ -22,12 +22,13 @@ def load_from_json_file(filename):
         return json.load(f)
 
 
-try:
-    existing_list = load_from_json_file("add_item.json")
-except FileNotFoundError:
-    existing_list = []
+if __name__ == "__main__":
+    try:
+        existing_list = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        existing_list = []
 
-for arg in sys.argv[1:]:
-    existing_list.append(arg)
+    for arg in sys.argv[1:]:
+        existing_list.append(arg)
 
-save_to_json_file(existing_list, "add_item.json")
+    save_to_json_file(existing_list, "add_item.json")

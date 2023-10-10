@@ -3,8 +3,24 @@
 This module for Input/Output
 """
 import sys
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+import json
+
+
+def save_to_json_file(my_obj, filename):
+    """
+    writes an Object to a text file, using a JSON representation
+    """
+    with open(filename, mode="w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
+
+
+def load_from_json_file(filename):
+    """
+    creates an Object from a “JSON file”
+    """
+    with open(filename, encoding="utf-8") as f:
+        return json.load(f)
+
 
 try:
     existing_list = load_from_json_file("add_item.json")

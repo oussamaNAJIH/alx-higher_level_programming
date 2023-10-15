@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+import csv
 """
 this model for base class
 """
@@ -84,6 +85,52 @@ class Base:
                 dict_list = json.loads(json_data)
                 for item in dict_list:
                     instance = cls.create(**item)
+                    instances.append(instance)
+        except FileNotFoundError:
+            return []
+        return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        serializes in CSV
+        """
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            if cls.__name__ == 'Rectangle':
+                for obj in list_objs:
+                    csvwriter.writerow([obj.id, obj.width,
+                                        obj.height, obj.x, obj.y])
+            elif cls.__name__ == 'Square':
+                for obj in list_objs:
+                    csvwriter.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserializes in CSV
+        """
+        filename = "{}.csv".format(cls.__name__)
+        instances = []
+        try:
+            with open(filename, 'r', newline='') as csvfile:
+                csvreader = csv.reader(csvfile)
+                for row in csvreader:
+                    if cls.__name__ == 'Rectangle':
+                        instance = cls.create(
+                            width=int(row[1]),
+                            height=int(row[2]),
+                            x=int(row[3]),
+                            y=int(row[4])
+                        )
+                    elif cls.__name__ == 'Square':
+                        instance = cls.create(
+                            size=int(row[1]),
+                            x=int(row[2]),
+                            y=int(row[3])
+                        )
+                    instance.id = int(row[0])
                     instances.append(instance)
         except FileNotFoundError:
             return []

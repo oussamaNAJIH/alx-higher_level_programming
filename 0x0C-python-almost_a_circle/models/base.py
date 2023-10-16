@@ -41,11 +41,11 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
-        from models.rectangle import Rectangle
-        from models.square import Square
         Mylist = []
-        for instance in list_objs:
-            Mylist.append(instance.to_dictionary())
+        if list_objs is not None:
+            for instance in list_objs:
+                if isinstance(instance, cls):
+                    Mylist.append(instance.to_dictionary())
         json_list = cls.to_json_string(Mylist)
         with open("{}.json".format(cls.__name__), mode="w") as Myfile:
             Myfile.write(json_list)

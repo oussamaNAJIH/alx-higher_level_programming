@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
-import csv
 """
 this model for base class
 """
+import json
+import csv
 
 
 class Base:

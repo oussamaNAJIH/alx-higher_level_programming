@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that lists all State objects from the database hbtn_0e_6_usa
+script that prints the first State object from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -16,7 +16,8 @@ if __name__ == "__main__":
     )
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
+    state = session.query(State).first()
+    if state:
         print("{}: {}".format(state.id, state.name))
-    session.close()
+    else:
+        print("Nothing")

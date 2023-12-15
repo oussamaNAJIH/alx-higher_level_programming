@@ -15,7 +15,8 @@ if __name__ == "__main__":
                            user=username, passwd=password,
                            db=nameDb, charset="utf8")
     cur = conn.cursor()
-    sql_query = "SELECT * FROM states WHERE name = '{}'".format(searched) + \
+    sql_query = "SELECT * FROM states WHERE " + \
+                "name LIKE BINARY '{}'".format(searched) + \
                 " ORDER BY id ASC"
     cur.execute(sql_query)
     query_rows = cur.fetchall()

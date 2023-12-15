@@ -16,7 +16,7 @@ if __name__ == "__main__":
                            db=nameDb, charset="utf8")
     cur = conn.cursor()
     sql_query = "SELECT * FROM states WHERE name " + \
-                "LIKE BINARY '%s' ORDER BY id ASC"
+                "LIKE BINARY %s ORDER BY id ASC"
     cur.execute(sql_query, (searched, ))
     query_rows = cur.fetchall()
     for row in query_rows:

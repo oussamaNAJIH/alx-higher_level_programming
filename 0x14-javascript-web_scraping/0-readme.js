@@ -1,10 +1,11 @@
 #!/usr/bin/node
-const request = require('request');
-const url = process.argv[2];
-request(url, function (error, response, body) {
-  if (!error && response.statusCode === 200) {
-    console.log(body);
+const fs = require('node:fs');
+const path = process.argv[2];
+
+fs.readFile(path, 'utf-8', (error, data) => {
+  if (error) {
+    console.log(error);
   } else {
-    console.error(error);
+    console.log(data);
   }
 });

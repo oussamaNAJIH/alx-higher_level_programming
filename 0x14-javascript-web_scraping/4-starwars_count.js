@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const url = process.argv[2];
+const characterId = 18;
 let count = 0;
 
 request(url, function (error, response, body) {
@@ -9,8 +10,9 @@ request(url, function (error, response, body) {
     for (const movie of movies) {
       const characters = movie.characters;
       for (const character of characters) {
-        if (character === 'https://swapi-api.alx-tools.com/api/people/18/') {
+        if (character.endsWith(`/${characterId}/`)) {
           count++;
+          break;
         }
       }
     }

@@ -7,8 +7,8 @@ request(movieUrl, function (error, response, body) {
   if (!error && response.statusCode === 200) {
     const data = JSON.parse(body);
     const characters = data.characters;
-    for (const characterUrl of characters) {
-      request(characterUrl, function (error, response, body) {
+    for (let index = 0; index < characters.length; index++) {
+      request(characters[index], function (error, response, body) {
         if (!error) {
           const character = JSON.parse(body);
           console.log(character.name);
